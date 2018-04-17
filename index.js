@@ -24,5 +24,11 @@ for (let i=0; i < rankedList.length; i++) {
 
 function deepestChild() {
 
-return document.querySelector('<div>') 
+var node = document.getElementById('grand-node') 
+var nextnode = node.children[0]
+while (nextnode) {
+  node = nextnode
+  nextnode = node.children[0]
+}
+return node
 }
